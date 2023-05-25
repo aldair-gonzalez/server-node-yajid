@@ -1,0 +1,8 @@
+CREATE TABLE IF NOT EXISTS images (
+  id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+  product_id INT NOT NULL,
+  url VARCHAR(255) NOT NULL,
+  description VARCHAR(255) NOT NULL,
+  
+  FOREIGN KEY (product_id) REFERENCES products(id)
+);
